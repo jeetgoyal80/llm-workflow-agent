@@ -1,4 +1,3 @@
-
 # 🔮 llm-workflow-agent
 
 An AI‑powered workflow assistant that understands Hindi–English mixed prompts and automates tasks like:
@@ -8,20 +7,23 @@ An AI‑powered workflow assistant that understands Hindi–English mixed prompt
 - Creating todos  
 - Scheduling Google Calendar events (with Meet links)
 
+---
 
 ## 📖 Table of Contents
 
-1. [Features](#-features)
-2. [Tech Stack](#-tech-stack)
-3. [Project Structure](#-project-structure)
-4. [Getting Started](#-getting-started)
-   - [Backend Setup](#backend-setup)
-   - [Frontend Setup](#frontend-setup)
-5. [Usage](#-usage)
-6. [Environment Variables](#-environment-variables)
-7. [Available Scripts](#-available-scripts)
-8. [Contributing](#-contributing)
-9. [License](#-license)
+1. [Features](#🚀-features)  
+2. [Tech Stack](#🧩-tech-stack)  
+3. [Project Structure](#📁-project-structure)  
+4. [Getting Started](#🚀-getting-started)  
+   - [Backend Setup](#backend-setup)  
+   - [Frontend Setup](#frontend-setup)  
+5. [Usage](#🛠️-usage)  
+6. [Environment Variables](#🔑-environment-variables)  
+7. [Available Scripts](#📦-available-scripts)  
+8. [Contributing](#🤝-contributing)  
+9. [License](#📜-license)  
+
+---
 
 ## 🚀 Features
 
@@ -31,8 +33,9 @@ An AI‑powered workflow assistant that understands Hindi–English mixed prompt
 - ☀️ Weather queries for any city  
 - ✅ Todo creation & management  
 - 🗓️ Google Calendar events + Meet links  
-- 💬 LLM chat fallback for general conversation
+- 💬 LLM chat fallback for general conversation  
 
+---
 
 ## 🧩 Tech Stack
 
@@ -43,9 +46,12 @@ An AI‑powered workflow assistant that understands Hindi–English mixed prompt
 - **Email:** Nodemailer  
 - **Calendar & Meet:** Google Calendar API  
 - **Frontend:** React, Vite, Tailwind CSS  
-- **Realtime:** Socket.IO (for reminders)
+- **Realtime:** Socket.IO (for reminders)  
+
+---
 
 ## 📁 Project Structure
+
 
 /
 ├── backend
@@ -66,22 +72,28 @@ An AI‑powered workflow assistant that understands Hindi–English mixed prompt
 │
 ├── .gitignore
 └── README.md
+/
 
-## 📁 Project setup
 
-## Backend Setup
+---
 
+## 🚀 Getting Started
+
+### Backend Setup
+
+```bash
 cd backend
 npm install
 cp .env.example .env
-# Edit .env with your values:
-# MONGO_URI=...
-# JWT_SECRET=...
-# GEMINI_API_KEY=...
-# GOOGLE_CLIENT_ID=...
-# GOOGLE_CLIENT_SECRET=...
-# GOOGLE_REDIRECT_URI=http://localhost:4000/api/google/callback
+#Edit .env with your values:
+ MONGO_URI=...
+ JWT_SECRET=...
+ GEMINI_API_KEY=...
+ GOOGLE_CLIENT_ID=...
+ GOOGLE_CLIENT_SECRET=...
+ GOOGLE_REDIRECT_URI=http://localhost:4000/api/google/callback
 npm run dev
+
 
 ## Frontend Setup
 
@@ -109,10 +121,11 @@ MONGO_URI=<mongo‑uri>
 JWT_SECRET=<secret>
 GEMINI_API_KEY=<key>
 EMAIL=<smtp_email>      # dev fallback
-EMAIL_PASS=<smtp_pass>  
+EMAIL_PASS=<smtp_pass>
 GOOGLE_CLIENT_ID=<id>
 GOOGLE_CLIENT_SECRET=<secret>
 GOOGLE_REDIRECT_URI=http://localhost:4000/api/google/callback
+
 
 ## frontend/.env
 
@@ -140,9 +153,9 @@ git checkout -b feature/your-feature
 git commit -m "feat: add your feature"
 git push origin feature/your-feature
 
-## License
 
+## License
 
 ---
 
-Copy each block into your `README.md`, in order. You can then tweak wording, add badges, or adjust ports/paths to your exact setup.
+Copy that straight into your `README.md` and adjust any URLs or values as needed.
