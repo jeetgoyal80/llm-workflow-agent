@@ -1,7 +1,7 @@
 # NL Task Automator - System Design Document
 
 ## 1. Overview
-NL Task Automator is a smart assistant that processes Hindi-English mixed language commands to manage personal tasks like reminders, emails, and Google Calendar events.
+NL Task Automator is a smart assistant that processes Hindi-English mixed language commands to manage personal tasks like reminders, emails, meet and Google Calendar events.
 
 ## 2. Features
 - Natural Language Command Processing
