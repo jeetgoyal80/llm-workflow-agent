@@ -11,7 +11,7 @@ Supported intents:
 - "weather": fetch current weather (fields: location and optional date like "today", "tomorrow")
 - "todo": create a task (fields: task/message)
 - "chat": normal conversation
-- "calendar": schedule events (fields: title, date, startTime, optional endTime, participants)
+- "calendar": schedule events (fields: title, date, startTime, optional (endTime, participants))
 
 Instructions:
 1. If a task is missing required info (except calendar), include a "missing": ["field1", "field2"] array inside "info".

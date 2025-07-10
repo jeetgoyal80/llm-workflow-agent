@@ -10,12 +10,28 @@ async function WeatherAgent(userId, info) {
     const data = response.data;
 
     const temp = data.main.temp;
-    const description = data.weather[0].description;
     const feels = data.main.feels_like;
+    const description = data.weather[0].description;
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
 
-    const reply = `🌤 Weather in ${location}: ${description}, ${temp}°C (feels like ${feels}°C)`;
+    const reply = `🌤 Weather in ${location}:
+- Condition: ${description}
+- Temperature: ${temp}°C (feels like ${feels}°C)
+- Humidity: ${humidity}%
+- Wind Speed: ${windSpeed} m/s`;
 
-    return { reply }; // ✅ Return object, not string
+    return {
+      reply,
+      weather: {
+        location,
+        description,
+        temperature: temp,
+        feelsLike: feels,
+        humidity,
+        windSpeed
+      }
+    };
   } catch (error) {
     console.error("🌧 Weather fetch failed:", error.message);
     throw new Error(`Could not fetch weather for "${location}". Try another city.`);

@@ -128,7 +128,7 @@ const handleGoogleLogin = async () => {
           className="w-full bg-white text-black border border-gray-300 mt-4 py-2 rounded-md font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition"
         >
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
             alt="Google"
             className="w-5 h-5"
           />

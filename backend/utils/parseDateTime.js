@@ -1,21 +1,36 @@
-// utils/parseDateTime.js or where your parseCalendarInfo is
-
 const moment = require("moment");
 
 function parseCalendarInfo(info) {
   let { title, date, startTime, endTime, participants } = info;
 
-  // Convert natural language date to standard format
+  const currentYear = new Date().getFullYear();
+
   if (date) {
-    const parsedDate = moment(date, [
-      "YYYY-MM-DD",
-      "D MMMM",
-      "dddd", // e.g., "Friday"
-      "[this] dddd",
-      "[next] dddd",
-      "D/M/YYYY",
-      "D-MM-YYYY",
-    ]);
+    let parsedDate;
+
+    // If user didn't include a year, try to add current year
+    if (!/\d{4}/.test(date)) {
+      // Append current year manually
+      parsedDate = moment(`${date} ${currentYear}`, [
+        "D MMMM YYYY",     // 5 July 2025
+        "MMMM D YYYY",     // July 5 2025
+        "dddd YYYY",       // Friday 2025
+      ]);
+
+      // If it's in the past, bump year to next year
+      if (parsedDate.isValid() && parsedDate.isBefore(moment(), 'day')) {
+        parsedDate.add(1, 'year');
+      }
+    } else {
+      // Date includes year explicitly
+      parsedDate = moment(date, [
+        "YYYY-MM-DD",
+        "D MMMM YYYY",
+        "MMMM D YYYY",
+        "D/M/YYYY",
+        "D-MM-YYYY",
+      ]);
+    }
 
     if (parsedDate.isValid()) {
       info.date = parsedDate.format("YYYY-MM-DD");
@@ -25,7 +40,7 @@ function parseCalendarInfo(info) {
   }
 
   // Convert "5 PM" to "17:00"
-  if (startTime && startTime.toLowerCase().includes("am") || startTime.toLowerCase().includes("pm")) {
+  if (startTime && (startTime.toLowerCase().includes("am") || startTime.toLowerCase().includes("pm"))) {
     const parsedTime = moment(startTime, ["h A", "hh A"]);
     if (parsedTime.isValid()) {
       info.startTime = parsedTime.format("HH:mm");
@@ -42,3 +57,5 @@ function parseCalendarInfo(info) {
 
   return info;
 }
+
+module.exports = { parseCalendarInfo };

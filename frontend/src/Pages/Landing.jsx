@@ -24,9 +24,9 @@ function Landing() {
               2000,
               "Say: remind me at 5pm",
               2000,
-              "Check weather in Bhopal 🌦️",
+              "Add meeting to calendar 📅",
               2000,
-              "Send WhatsApp instantly",
+              "Schedule Google Meet call 🎥",
               2000,
             ]}
             wrapper="span"
@@ -53,14 +53,14 @@ function Landing() {
         transition={{ duration: 0.8 }}
         className="text-center z-10 max-w-2xl w-full px-2"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight ">
           <TypeAnimation
             sequence={[
               "Your Smart AI Task Assistant",
               1000,
               "Set Reminders Easily",
               1000,
-              "Send WhatsApp or Emails",
+              "Schedule Google Meet or Emails",
               1000,
               "Control Everything with Voice",
               1000,
@@ -93,9 +93,9 @@ function Landing() {
                 2000,
                 "Say: remind me at 5pm",
                 2000,
-                "Check weather in Bhopal 🌦️",
+                "Add meeting to calendar 📅",
                 2000,
-                "Send WhatsApp instantly",
+                "Schedule Google Meet call 🎥",
                 2000,
               ]}
               wrapper="span"
@@ -108,7 +108,6 @@ function Landing() {
             alt="Bot Mobile"
             className="w-24 mt-3 drop-shadow-xl rounded-xl mb-2"
           />
-
         </div>
       </motion.div>
 
@@ -117,9 +116,9 @@ function Landing() {
         {[
           { icon: "⏰", title: "Reminders", desc: "Natural reminders — never miss a thing." },
           { icon: "📬", title: "Email Assistant", desc: "Send messages like 'Mail boss I'm late'" },
-          { icon: "📱", title: "WhatsApp", desc: "Say 'Tell Rahul I’m at the gate'" },
+          { icon: "📅", title: "Google Calendar", desc: "Create events like 'Add meeting at 4pm'" },
+          { icon: "🎥", title: "Google Meet", desc: "Say 'Schedule a Meet with Rahul'" },
           { icon: "📝", title: "To-Do List", desc: "Voice-based daily task tracking" },
-          { icon: "☀️", title: "Weather", desc: "Ask weather in any city" },
           { icon: "🤖", title: "Smart Chat", desc: "Casual AI chat with fallback responses" },
         ].map((f, i) => (
           <motion.div
@@ -146,9 +145,9 @@ function Landing() {
               2000,
               "Ask me to set a reminder ⏰",
               2000,
-              "I can send WhatsApp too!",
+              "I can create Calendar events! 📅",
               2000,
-              "Say: Email boss I'm late 📬",
+              "Say: Schedule Meet with boss 🎥",
               2000,
               "Try me now 👇",
               2000,
@@ -168,6 +167,7 @@ function Landing() {
           />
         </Tilt>
       </div>
+
       {/* FAQ Section */}
       <div className="mt-20 w-full max-w-3xl z-10 px-4" data-aos="fade-up">
         <h2 className="text-2xl font-bold text-center text-white mb-6">❓ Frequently Asked Questions</h2>
@@ -178,8 +178,12 @@ function Landing() {
               a: "Just say something like 'Remind me to call mom at 6pm'. The assistant will take care of it."
             },
             {
-              q: "Can I send WhatsApp messages?",
-              a: "Yes! You can say 'Send a WhatsApp to Rahul saying I'm outside'. Just make sure Rahul is in your contacts."
+              q: "Can I schedule Google Calendar events?",
+              a: "Yes! You can say 'Add meeting with team at 4pm tomorrow', and it will be added to your calendar."
+            },
+            {
+              q: "Can I create a Google Meet call?",
+              a: "Definitely. Just say 'Schedule a Google Meet with Rahul at 5pm' and you’ll get a meeting link."
             },
             {
               q: "Is my data secure?",
@@ -187,7 +191,7 @@ function Landing() {
             },
             {
               q: "What voice commands are supported?",
-              a: "Commands like reminders, weather checks, sending messages/emails, and even casual chat are supported."
+              a: "Commands like reminders, Google Meet, calendar events, weather checks, emails, and even casual chat are supported."
             },
           ].map((item, idx) => (
             <details key={idx} className="bg-white/5 p-4 rounded-xl border border-white/10">
@@ -199,7 +203,6 @@ function Landing() {
           ))}
         </div>
       </div>
-
 
       {/* 🧾 Footer */}
       <footer className="mt-16 mb-5 text-gray-400 text-xs z-10 text-center">

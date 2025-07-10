@@ -5,7 +5,7 @@ const path = require("path");
 
 // ✅ Gemini model setup
 const model = new ChatGoogleGenerativeAI({
-  model: "gemini-2.5-flash-preview-05-20",
+  model: "gemini-2.5-flash",
   maxOutputTokens: 512,
   temperature: 0.3,
   apiKey: process.env.GEMINI_API_KEY,
