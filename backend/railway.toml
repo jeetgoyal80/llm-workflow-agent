@@ -1,0 +1,7 @@
+[build]
+builder = "NIXPACKS"
+
+[service.backend]
+root = "backend"
+build = "npm install"
+start = "npm run start"
